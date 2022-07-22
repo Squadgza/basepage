@@ -5,12 +5,29 @@ export default function CustomTextInput() {
 
   const [messages, setMessages] = useState([]);
 
-  // simulate chat messages flowing in
-  const myInterval = () => setTimeout(setMessages(current => [...current, messages.length]),
-    3000);
+  // // simulate chat messages flowing in
+  // const myInterval = () => setTimeout(setMessages([...messages, messages.length]),
+  //   10000);
+
+  // useEffect(() => {
+  //   // const myInterval = () => setTimeout(setMessages(current => [...current, messages.length]),
+  //   //   3000);
+  //   if (messages.length < 15) myInterval();
+
+  //   // scroll to bottom every time messages change
+  //   bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  // }, [messages]);
 
   useEffect(() => {
-    if (messages.length < 10) myInterval();
+    const myInterval = () => {
+      setTimeout(
+        () => {
+          setMessages([...messages, messages.length]);
+        },
+        1000,
+      );
+    }
+    if (messages.length < 60) myInterval();
 
     // scroll to bottom every time messages change
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -24,7 +41,11 @@ export default function CustomTextInput() {
   };
 
   return (
-    <div>
+    <div style={{
+      marginLeft: "30px",
+      fontSize: "24px",
+      color: 'purple'
+    }}>
       <h2>Top of the page</h2>
       <div>
         {messages.map((message, index) => {
