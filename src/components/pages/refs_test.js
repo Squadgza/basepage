@@ -2,21 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function CustomTextInput() {
   const bottomRef = useRef(null);
-
   const [messages, setMessages] = useState([]);
-
-  // // simulate chat messages flowing in
-  // const myInterval = () => setTimeout(setMessages([...messages, messages.length]),
-  //   10000);
-
-  // useEffect(() => {
-  //   // const myInterval = () => setTimeout(setMessages(current => [...current, messages.length]),
-  //   //   3000);
-  //   if (messages.length < 15) myInterval();
-
-  //   // scroll to bottom every time messages change
-  //   bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
-  // }, [messages]);
 
   useEffect(() => {
     const myInterval = () => {
@@ -59,5 +45,3 @@ export default function CustomTextInput() {
     </div>
   );
 }
-
-// export default CustomTextInput;
