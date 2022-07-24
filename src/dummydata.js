@@ -6,4 +6,4 @@ const dummydata = [
     location:'embadded google image'
 },
 
-]
+];
