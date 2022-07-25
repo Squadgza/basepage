@@ -4,6 +4,9 @@ import Nav from './components/navbar/navbar';
 import Contact from './components/pages/contact';
 import Example from './components/pages/about';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/footer/Footer';
+
+
 function App() {
   return (
     <div>
@@ -14,6 +17,7 @@ function App() {
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='/about' element={<Example />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   )
