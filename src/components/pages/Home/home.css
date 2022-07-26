@@ -1,1 +1,15 @@
-/* same { } */
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 15px;
+  margin: 25px;
+  border: 1px dotted blue;
+}
+
+#root>div>div.home>div.grid1>div.flex-col {
+  grid-column: 1;
+}
+
+#root>div>div.home>div.grid1>div:nth-child(2) {
+  grid-column: 2;
+}
