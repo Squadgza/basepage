@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from './Card'
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Emoji from '../../../emoji/emoji';
 
 
 const CardColumn = ({ data }) => {
@@ -29,6 +30,7 @@ const CardColumn = ({ data }) => {
       next={getMoreData}
       hasMore={hasMore}
       loader={<h4>Loading...</h4>}
+      endMessage={<h4>You reached end <Emoji symbol="👌" label="OK" /></h4>}
     >
       <div>
         {current && current.map(((item) => (
