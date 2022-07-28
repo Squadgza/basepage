@@ -1,9 +1,9 @@
 import React from 'react';
 
 // to use it example 
-{/* <Emoji symbol="🐑" label="sheep"/>
+/* <Emoji symbol="🐑" label="sheep"/>
 // or
-<Emoji symbol="🐑"/> */}
+<Emoji symbol="🐑"/> */
 
 //  👌 here is some to copy
 
