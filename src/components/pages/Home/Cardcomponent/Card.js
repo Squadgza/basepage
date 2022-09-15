@@ -2,6 +2,7 @@ import React from 'react'
 
 const Card = ({ data }) => {
   console.log(data, 'single card');
+  // add user and UX for him
   return (
     <div >
           <h4>
