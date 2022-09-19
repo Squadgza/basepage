@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Card from './Card'
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Emoji from '../../../emoji/emoji';
+import uniqid from 'uniqid';
 
 
 const CardColumn = ({ data }) => {
@@ -34,7 +35,7 @@ const CardColumn = ({ data }) => {
     >
       <div>
         {current && current.map(((item) => (
-          <Card data={item} />
+          <Card key={uniqid()} data={item} />
         )))
         }
       </div>
