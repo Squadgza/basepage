@@ -9,10 +9,10 @@ const SignUp = () => {
           <h2>Log In</h2>
         </div>
         <form action="" className='flexcol' method="post">
-          <label className='f20' for='username'><b>Username:</b></label>
-          <input className='loginp username' type='text' name='username' placeholder='username' />
-          <label className='f20' for='password'><b>Password:</b></label>
-          <input className='loginp password' type='password' name='password' placeholder='password' />
+          <label className='f20' htmlFor='username'><b>Username:</b></label>
+          <input id='username' className='loginp username' type='text' name='username' placeholder='username' />
+          <label className='f20' htmlFor='password'><b>Password:</b></label>
+          <input id='password' className='loginp password' type='password' name='password' placeholder='password' />
           <input className='logstyle' id='lastloginp' type='submit' value='Log In' />
           {/* TODO create form/page for restore passw */}
           <p className='f20'>Forgot password? <Link to="/restore_password">Send request</Link></p>
@@ -33,7 +33,7 @@ const AccountInfo = () => {
       <p className="profile-page__name">UserWarnings</p>
       <p className="profile-page__name">User sign-up's to events</p>
       <p className="profile-page__name">User Since</p>
-      <div className="profile-page__visits">Users views <p class="profile-page__visits-count">94</p></div>
+      <div className="profile-page__visits">Users views <p className="profile-page__visits-count">94</p></div>
     </div>
   )
 }
